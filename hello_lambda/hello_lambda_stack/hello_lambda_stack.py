@@ -15,6 +15,6 @@ class HelloLambdaStack(Stack):
             self,
             'MyLambda',
             runtime=_lambda.Runtime.PYTHON_3_7,
-            code=_lambda.Code.asset('my_lambda'),
+            code=_lambda.Code.from_asset('my_lambda'),
             handler='handler.lambda_handler',
         )
