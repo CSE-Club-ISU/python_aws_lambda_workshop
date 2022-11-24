@@ -1,19 +1,20 @@
 from aws_cdk import (
-    # Duration,
     Stack,
-    # aws_sqs as sqs,
+    aws_lambda as _lambda,
 )
 from constructs import Construct
+
 
 class HelloLambdaStack(Stack):
 
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        # The code that defines your stack goes here
-
-        # example resource
-        # queue = sqs.Queue(
-        #     self, "HelloLambdaQueue",
-        #     visibility_timeout=Duration.seconds(300),
-        # )
+        # new lambda function from my_lambda/handler.py
+        hello_lambda = _lambda.Function(
+            self,
+            'MyLambda',
+            runtime=_lambda.Runtime.PYTHON_3_7,
+            code=_lambda.Code.asset('my_lambda'),
+            handler='handler.lambda_handler',
+        )
