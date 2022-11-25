@@ -4,7 +4,7 @@ This is a workshop to learn how to create the most basic AWS Lambda functions us
 ## Prerequisites
 * AWS Account ([Sign up here](https://aws.amazon.com/free/))
 * AWS CLI ([Install here](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html))
-* Python 3.6+ [Installation](https://www.python.org/downloads/) (Optional)
+* Python 3.6+ [Installation](https://www.python.org/downloads/)
 
 ## Contents <!-- explain directory contents -->
 * [/hello_lambda](hello_lambda) - AWS CDK Project
