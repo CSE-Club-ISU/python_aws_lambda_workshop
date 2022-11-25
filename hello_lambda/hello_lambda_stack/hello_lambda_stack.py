@@ -18,3 +18,5 @@ class HelloLambdaStack(Stack):
             code=_lambda.Code.from_asset('my_lambda'),
             handler='handler.lambda_handler',
         )
+
+        hello_lambda_url = hello_lambda.add_function_url(auth_type=_lambda.FunctionUrlAuthType.NONE)
